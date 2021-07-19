@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Page</title>
+  </head>
+  <body>
+    <h2>Order Form</h2>
+    <form action="/save" method="POST">
+      <input type="text" name="name" placeholder="User name" />
+      <input type="text" name="address" placeholder="Address" />
+      <input type="email" name="email" placeholder="email" />
+      <p>Item to be ordered</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Product name:</th>
+            <td><input name="productName" placeholder="Product Name" /></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Product Price:</th>
+            <td><input name="productPrice" placeholder="Product Price" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
