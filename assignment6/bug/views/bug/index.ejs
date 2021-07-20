@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('../partials/headers.ejs') %>
+  </head>
+  <body>
+    <form action="/bug" method="POST">
+      <div class="container">
+        <div class="card">
+          <div class="card-header"><h1>Report a bug</h1></div>
+          <div class="card-body">
+            <div class="mb-3">
+              <input
+                name="title"
+                class="form-control"
+                type="text"
+                placeholder="Title"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                name="description"
+                class="form-control"
+                type="text"
+                placeholder="Description"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                name="assignee"
+                class="form-control"
+                type="text"
+                placeholder="Assignee"
+              />
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <button type="submit" class="btn btn-secondary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

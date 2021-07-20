@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('../partials/headers.ejs') %>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">Bug List</div>
+        <div class="card-body">
+            <table class='table'>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Assignee</th>
+                    <th>Leftover days</th>
+
+                </tr>
+            </thead>
+            <% for (let i=0;i<bug.length;i++) { %>
+
+    <tbody>
+        <tr>
+            <td><%= bug[i].title %></td>
+            <td><%= bug[i].description %></td>
+
+            <td><%= bug[i].assignee %></td>
+            <td><%= bug[i].status %></td>
+
+        </tr>
+    </tbody>
+    <% } %>
+</table>             
+        </div>
+
+        <div class="card-footer">
+            <a href="/bug" class='btn btn-secondary'>Back to reporting</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
