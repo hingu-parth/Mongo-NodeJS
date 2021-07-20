@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <%- include('../partials/head.ejs') %>
+
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <br>
+    <div class='container'>
+        <a class='btn btn-secondary' href="/products/create">Add a document</a>
+     <br>
+    <h3>Products List</h3>
+    <br>
+    <table class='table '>
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Quantity</th>
+                <th>Product Price</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <% for (var i=0;i<productsList.length;i++){ %>
+        <tbody>
+            <tr>
+                <td><%=productsList[i]._id %></td>
+                <td><%=productsList[i].name %></td>
+                <td><%=productsList[i].quantity %></td>
+
+                <td><%=productsList[i].price %></td>
+                <td><a href="/products/<%=productsList[i]._id %>">View Details</a></td>
+
+                <% } %>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+    </div>
+</body>
+</html>
