@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('../partial/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../partial/navbar.ejs') %>
+
+    <div class="d-md-flex h-md-100 align-items-center">
+      <!-- First Half -->
+      <div class="col-md-6 p-0 h-md-100">
+        <div
+          class="d-md-flex align-items-center h-100 p-5 justify-content-center"
+        >
+          <div class="pt-5 pb-5">
+            <div class="container">
+              <h2>User Login</h2>
+              <br />
+              <form action="/users/login" method="POST">
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="User Name"
+                    name="username"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Password"
+                    name="password"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    class="btn btn-secondary"
+                    type="submit"
+                    value="Login"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Half -->
+      <div class="col-md-6 p-0 bg-white h-md-100">
+        <div
+          class="
+            d-md-flex
+            align-items-center
+            h-md-100
+            p-5
+            justify-content-center
+          "
+        >
+          <div class="container">
+            <h2>User Registration</h2>
+            <br />
+            <form action="/users/register" method="POST">
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="User Name"
+                  name="username"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Password"
+                  name="password"
+                />
+              </div>
+
+              <div class="mb-3">
+                <input
+                  class="btn btn-secondary"
+                  type="submit"
+                  value="Register"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------- -->
+  </body>
+</html>

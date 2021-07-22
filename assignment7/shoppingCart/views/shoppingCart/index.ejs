@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('../partial/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../partial/navbar.ejs') %>
+    <div class='container'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>Data</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for(let i=0;i<products.length;i++){ %>
+        <tr>
+          <td><%= products[i].id %></td>
+          <td><%= products[i].product %></td>
+          <td><%= products[i].data %></td>
+          <td><%= products[i].price %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <div >    <%  if(user.type==='on'){ %> 
+      
+      <%- include('../partial/adminRights.ejs') %>
+      <% } %>
+    </div> 
+
+</div>
+  </body>
+</html>

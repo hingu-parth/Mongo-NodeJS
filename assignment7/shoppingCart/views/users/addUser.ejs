@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include('../partial/head.ejs') %>
+  </head>
+  <body>
+    <div class="container">
+      <br /><br />
+      <h2>Add User</h2>
+      <br />
+      <form action="/users/registerAdmin" method="POST">
+        <div class="mb-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="User Name"
+            name="username"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Password"
+            name="password"
+          />
+        </div>
+        <div class="mb-3">
+          <input type="checkbox" class="form-check-input" name="type" /> Admin
+        </div>
+
+        <div class="mb-3">
+          <input class="btn btn-secondary" type="submit" value="Register" />
+          <input class="btn btn-secondary" type="reset" value="Clear" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
